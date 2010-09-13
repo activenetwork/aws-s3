@@ -290,6 +290,7 @@ namespace :todo do
   end
 end if File.exists?(File.join(library_root, 'TODO'))
 
+=begin
 namespace :site do
   require 'erb'
   require 'rdoc/markup/simple_markup'
@@ -330,5 +331,6 @@ namespace :site do
     sh %(scp #{site_files.join ' '} marcel@rubyforge.org:/var/www/gforge-projects/amazon/)
   end
 end 
+=end
 
 task :clean => ['dist:clobber_package', 'doc:clobber_rdoc', 'test:clobber_coverage']
